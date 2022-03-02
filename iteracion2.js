@@ -33,19 +33,19 @@ let arrayMusica = []
 
 
 
-let promedio = 0;
-let volume = []
+let sum = 0;
+let count = 0;
 for (object of users){
 
-    let objectList = object.favoritesSounds;
-
-    for (objetos in objectList){
-        volume.push(objectList[objetos].volume)
-         promedio += objectList[objetos].volume
+    for (objetos in object.favoritesSounds){
+        
+        
+         sum += object.favoritesSounds[objetos].volume
+            count++
          
     }
 
 
 }
     
-console.log(promedio / volume.length)
+console.log(sum / count )
